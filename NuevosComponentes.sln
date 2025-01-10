@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestControles", "TestContro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormEjercicio1", "FormEjercicio1\FormEjercicio1.csproj", "{71DA060B-708D-475C-ABAA-DFCE3454A1E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformaciones", "Transformaciones\Transformaciones.csproj", "{817FC352-42D2-43FA-8953-85B323534E45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{71DA060B-708D-475C-ABAA-DFCE3454A1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DA060B-708D-475C-ABAA-DFCE3454A1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71DA060B-708D-475C-ABAA-DFCE3454A1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817FC352-42D2-43FA-8953-85B323534E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817FC352-42D2-43FA-8953-85B323534E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817FC352-42D2-43FA-8953-85B323534E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817FC352-42D2-43FA-8953-85B323534E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

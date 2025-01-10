@@ -30,7 +30,7 @@ namespace NuevosComponentes
                 if (Enum.IsDefined(typeof(EPosicion), value))
                 {
                     posicion = value;
-                    recolocar();
+                    this.Refresh();
                     OnPosicionChanged(EventArgs.Empty);
                 }
                 else
@@ -43,7 +43,7 @@ namespace NuevosComponentes
 
         private void recolocar()
         {
-                    this.Width = txt.Width + lbl.Width + Separacion;
+            this.Width = txt.Width + lbl.Width + Separacion;
             switch (posicion)
             {
                 case EPosicion.IZQUIERDA:
@@ -73,7 +73,7 @@ namespace NuevosComponentes
         // que aquí nos saltamos.
         private void LabelTextBox_SizeChanged(object sender, EventArgs e)
         {
-            recolocar();
+            this.Refresh();
         }
 
         //Pixeles de separación entre label y textbox
@@ -88,7 +88,7 @@ namespace NuevosComponentes
                 if (value >= 0)
                 {
                     separacion = value;
-                    recolocar();
+                    this.Refresh();
                     OnSeparacionChanged(EventArgs.Empty);
                 }
                 else
@@ -106,7 +106,7 @@ namespace NuevosComponentes
             set
             {
                 lbl.Text = value;
-                recolocar();
+                this.Refresh();
             }
             get { return lbl.Text; }
         }
@@ -122,13 +122,13 @@ namespace NuevosComponentes
         public LabelTextBox()
         {
             InitializeComponent();
-            recolocar();
+            this.Refresh();
         }
 
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
-            recolocar();
+            this.Refresh();
         }
 
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
@@ -211,6 +211,13 @@ namespace NuevosComponentes
         {
             set { txt.PasswordChar = value; }
             get { return txt.PasswordChar; }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            recolocar();
+            e.Graphics.DrawLine(new Pen(Color.Violet), lbl.Left, this.Height-1,lbl.Left + lbl.Width, this.Height-1);
         }
     }
 }

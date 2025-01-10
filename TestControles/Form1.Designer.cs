@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.labelTextBox1 = new NuevosComponentes.LabelTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTextBox1
@@ -36,20 +37,33 @@
             this.labelTextBox1.Location = new System.Drawing.Point(143, 137);
             this.labelTextBox1.Name = "labelTextBox1";
             this.labelTextBox1.Posicion = NuevosComponentes.LabelTextBox.EPosicion.DERECHA;
+            this.labelTextBox1.PswChr = '\0';
             this.labelTextBox1.Separacion = 20;
-            this.labelTextBox1.Size = new System.Drawing.Size(423, 20);
+            this.labelTextBox1.Size = new System.Drawing.Size(183, 20);
             this.labelTextBox1.TabIndex = 0;
             this.labelTextBox1.TextLbl = "Elaboracion";
             this.labelTextBox1.TextTxt = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(385, 133);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(727, 330);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTextBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
 
         }
@@ -57,6 +71,7 @@
         #endregion
 
         private NuevosComponentes.LabelTextBox labelTextBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
