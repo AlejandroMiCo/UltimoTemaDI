@@ -32,5 +32,10 @@ namespace FormEjercicio1
         {
             this.Text += "\tSeparacion :D";
         }
+
+        private void labelTextBox1_TxtChanged(object sender, EventArgs e)
+        {
+            Text = "patata";
+        }
     }
 }

@@ -138,7 +138,7 @@ namespace NuevosComponentes
 
         private void txt_TextChanged(object sender, EventArgs e)
         {
-            this.OnTextChanged(e);
+            this.OnTxtChanged(e);
         }
 
 
@@ -169,20 +169,21 @@ namespace NuevosComponentes
         }
 
 
-        [Category("La propiedad cambió")]
-        [Description("Se lanza cuando la propiedad keyUp(?) cambia")]
-        public event EventHandler LtKeyUp;
+        //[Category("La propiedad cambió")]
+        //[Description("Se lanza cuando se suelta una tecla")]
+        //public event EventHandler LtKeyUp;
 
-        protected virtual void OnKeyUp(EventArgs e)
-        {
-            if (LtKeyUp != null)
-            {
-                LtKeyUp(this, e);
-            }
-        }
+        //protected virtual void OnKeyUp(EventArgs e)
+        //{
+        //    if (LtKeyUp != null)
+        //    {
+        //        LtKeyUp(this, e);
+        //    }
+        //}
 
         private void txt_KeyUp(object sender, KeyEventArgs e)
         {
+            this.BackColor = this.BackColor == DefaultBackColor ? Color.Red : DefaultBackColor;
             this.OnKeyUp(e);
         }
 
@@ -201,7 +202,7 @@ namespace NuevosComponentes
 
         private void txt_TextChanged_1(object sender, EventArgs e)
         {
-            this.OnTextChanged(e);
+            this.OnTxtChanged(e);
         }
 
 
@@ -217,7 +218,24 @@ namespace NuevosComponentes
         {
             base.OnPaint(e);
             recolocar();
-            e.Graphics.DrawLine(new Pen(Color.Violet), lbl.Left, this.Height-1,lbl.Left + lbl.Width, this.Height-1);
+            e.Graphics.DrawLine(new Pen(Color.Violet), lbl.Left, this.Height - 1, lbl.Left + lbl.Width, this.Height - 1);
+        }
+
+
+        // Ejercicio 2 a
+
+        private bool isUnderlined;
+
+        [Category("Mis Propiedades")]
+        [Description("Indica si labelTextBox esta subrayado")]
+        public bool Underline
+        {
+            set
+            {
+                isUnderlined = Underline;
+            }
+            get { return isUnderlined; }
+
         }
     }
 }

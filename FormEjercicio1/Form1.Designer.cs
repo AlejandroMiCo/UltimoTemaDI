@@ -37,13 +37,15 @@
             this.labelTextBox1.Location = new System.Drawing.Point(198, 98);
             this.labelTextBox1.Name = "labelTextBox1";
             this.labelTextBox1.Posicion = NuevosComponentes.LabelTextBox.EPosicion.IZQUIERDA;
+            this.labelTextBox1.PswChr = '\0';
             this.labelTextBox1.Separacion = 0;
-            this.labelTextBox1.Size = new System.Drawing.Size(251, 20);
+            this.labelTextBox1.Size = new System.Drawing.Size(135, 20);
             this.labelTextBox1.TabIndex = 0;
             this.labelTextBox1.TextLbl = "label1";
             this.labelTextBox1.TextTxt = "";
             this.labelTextBox1.PosicionChanged += new System.EventHandler(this.labelTextBox1_PosicionChanged);
             this.labelTextBox1.SeparacionChanged += new System.EventHandler(this.labelTextBox1_SeparacionChanged);
+            this.labelTextBox1.TxtChanged += new System.EventHandler(this.labelTextBox1_TxtChanged);
             // 
             // button1
             // 
