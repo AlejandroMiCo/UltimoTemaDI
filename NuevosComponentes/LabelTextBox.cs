@@ -214,13 +214,6 @@ namespace NuevosComponentes
             get { return txt.PasswordChar; }
         }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            recolocar();
-            e.Graphics.DrawLine(new Pen(Color.Violet), lbl.Left, this.Height - 1, lbl.Left + lbl.Width, this.Height - 1);
-        }
-
 
         // Ejercicio 2 a
 
@@ -233,9 +226,32 @@ namespace NuevosComponentes
             set
             {
                 isUnderlined = Underline;
+                this.Refresh();
+                OnUnderlineChange(EventArgs.Empty);
             }
             get { return isUnderlined; }
 
+        }
+
+        [Category("Events")]
+        [Description("Se lanza al cambiar la propiedad")]
+        public event EventHandler UnderlineChanged;
+
+
+        protected virtual void OnUnderlineChange(EventArgs e)
+        {
+            UnderlineChanged?.Invoke(this, e);
+        }
+
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            recolocar();
+            if (isUnderlined)
+            {
+                e.Graphics.DrawLine(new Pen(Color.Violet), lbl.Left, this.Height - 1, lbl.Left + lbl.Width, this.Height - 1);
+            }
         }
     }
 }

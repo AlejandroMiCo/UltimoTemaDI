@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelTextBox1 = new NuevosComponentes.LabelTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.etiquetaAviso1 = new NuevosComponentes.EtiquetaAviso();
+            this.labelTextBox1 = new NuevosComponentes.LabelTextBox();
             this.SuspendLayout();
-            // 
-            // labelTextBox1
-            // 
-            this.labelTextBox1.Location = new System.Drawing.Point(143, 137);
-            this.labelTextBox1.Name = "labelTextBox1";
-            this.labelTextBox1.Posicion = NuevosComponentes.LabelTextBox.EPosicion.DERECHA;
-            this.labelTextBox1.PswChr = '\0';
-            this.labelTextBox1.Separacion = 20;
-            this.labelTextBox1.Size = new System.Drawing.Size(183, 20);
-            this.labelTextBox1.TabIndex = 0;
-            this.labelTextBox1.TextLbl = "Elaboracion";
-            this.labelTextBox1.TextTxt = "";
             // 
             // button1
             // 
@@ -57,12 +45,29 @@
             // 
             // etiquetaAviso1
             // 
-            this.etiquetaAviso1.Location = new System.Drawing.Point(127, 232);
-            this.etiquetaAviso1.Marca = NuevosComponentes.EMarca.Circulo;
+            this.etiquetaAviso1.ColorFinal = System.Drawing.Color.Blue;
+            this.etiquetaAviso1.ColorInicial = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.etiquetaAviso1.Gradiente = true;
+            this.etiquetaAviso1.ImagenMarca = global::TestControles.Properties.Resources.logo;
+            this.etiquetaAviso1.Location = new System.Drawing.Point(221, 232);
+            this.etiquetaAviso1.Marca = NuevosComponentes.EMarca.Imagen;
             this.etiquetaAviso1.Name = "etiquetaAviso1";
-            this.etiquetaAviso1.Size = new System.Drawing.Size(131, 53);
+            this.etiquetaAviso1.Size = new System.Drawing.Size(91, 13);
             this.etiquetaAviso1.TabIndex = 2;
             this.etiquetaAviso1.Text = "etiquetaAviso1";
+            // 
+            // labelTextBox1
+            // 
+            this.labelTextBox1.Location = new System.Drawing.Point(143, 137);
+            this.labelTextBox1.Name = "labelTextBox1";
+            this.labelTextBox1.Posicion = NuevosComponentes.LabelTextBox.EPosicion.DERECHA;
+            this.labelTextBox1.PswChr = '\0';
+            this.labelTextBox1.Separacion = 20;
+            this.labelTextBox1.Size = new System.Drawing.Size(183, 20);
+            this.labelTextBox1.TabIndex = 0;
+            this.labelTextBox1.TextLbl = "Elaboracion";
+            this.labelTextBox1.TextTxt = "";
+            this.labelTextBox1.Underline = false;
             // 
             // Form1
             // 
