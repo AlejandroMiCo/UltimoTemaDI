@@ -19,6 +19,9 @@ namespace NuevosComponentes
         Imagen
     }
 
+
+    [DefaultEvent("ClickEnMarca")]
+    [DefaultProperty("Marca")]
     public partial class EtiquetaAviso : Control
     {
         private EMarca marca = EMarca.Nada;
